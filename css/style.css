@@ -1,0 +1,134 @@
+
+/*
+-------------------------------------------------------------------
+        MY STYLE
+-------------------------------------------------------------------
+*/
+/* COLOR PALLET
+#247ba0 - LAPIZ LAZULI
+#70c1b3 - GREEN SHEEN
+#b2dbbf - SEA FOAM GREEN
+#f3ffbd - VERY PALE YELLOW
+#ff1654 - AWESOME
+#faffe7 - MAIN BACKGROUND COLOR
+ */
+
+.awesome
+{
+    background-color: #ff1654;
+}
+
+
+nav
+{
+    background-color: #247ba0;
+}
+
+
+/* STICKY FOOTER */
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+    background-color: #faffe7;
+}
+/* STICKY FOOTER */
+      
+
+.titulo
+{
+    color: #d6ab7d !important;
+    //font-size: 2.3em !important;
+    font-family: 'Italianno', cursive;
+    line-height: 100%;
+    text-align: center;
+    text-shadow: #8c5f38 1px 1px 0px, rgba(167, 124, 81, 0.5) 1px -1px 0px, #be9368 0px 0px 15px;
+}
+
+.django-ico
+{
+    //height: 1rem;
+    width: 1rem;
+}
+
+
+/*
+-------------------------------------------------------------------
+        Style Flickity
+-------------------------------------------------------------------
+*/
+
+/* carousel height, as percentage of width */
+.fcarousel 
+{
+  //height: 88vh;
+  height: calc(100vh - 4em);
+  //border: 1px solid blue;
+  //padding-bottom: 93.1%;
+}
+
+/* viewport inherit size from carousel */
+.fcarousel .flickity-viewport
+{
+  position: absolute;
+  width: 100%;
+}
+
+
+/* cell inherit height from carousel */
+.carousel-cell 
+{
+    //width: auto; /* full width */
+    //height: auto; /* height of carousel */
+    height: calc(100vh - 4em);
+    margin-right: 5px;
+    //border: 10px solid red;
+    //background-position: center center;
+    //background-size: cover;
+}
+
+
+.carousel_cell_img
+{
+    //display: block;
+    //width: 100%;
+    //height: auto;
+    //border: 1px solid #dad417;
+}
+
+/* move page dots into carousel */
+/*.flickity-page-dots
+{
+    bottom: 10px;
+}*/
+
+.footer-copyright a
+{
+    color: #263238;
+}
+
+.page-footer {
+    padding-top: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
