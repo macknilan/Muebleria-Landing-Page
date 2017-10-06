@@ -6,12 +6,12 @@ from django.urls import reverse
 from django.utils.text import slugify
 from django.utils.crypto import get_random_string
 from django.utils.translation import ugettext_lazy as _
+from django.utils.encoding import python_2_unicode_compatible
 from django.core.exceptions import ValidationError
 from django.db import models
 
 
 class SlugMixin(object):
-
     def get_slug(self, text, model):
         slug_text = slugify(text)
         # count = 2
@@ -35,6 +35,7 @@ def change_file_name(self, imagefilename):
     return os.path.join('fotos_categoria', imagefilename)
 
 
+@python_2_unicode_compatible
 class Categoria(SlugMixin, models.Model):
     CAT_M = (
         ('ninguno', 'Ninguno'),
