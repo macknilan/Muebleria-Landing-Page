@@ -1,0 +1,134 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <meta name="description" content="Muebles y Dise&ntilde;os de Madera del Centro">
+
+    <title>Muebles y Dise&ntilde;os de Madera del Centro</title>
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Italianno" rel="stylesheet">
+    <script src="https://use.fontawesome.com/e9fc25ef12.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"> -->
+    <link rel="stylesheet" href="{% static "css/materialize.css" %}" type="text/css"  media="screen,projection"/>
+    <link rel="stylesheet" href=" {% static "css/flickity.css" %}" type="text/css"  media="screen,projection"/>
+    <link rel="stylesheet" href="{% static "css/style.css" %}" type="text/css"  media="screen,projection"/>
+</head>
+<body>
+<header>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper container">
+                <a href="#" class="brand-logo titulo">Muebles y Dise&ntilde;os <br> en Madera</a>
+                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a class="white-text" href="#!" title="Comedores">Comedores</a></li>
+                    <li><a class="white-text" href="#!" title="Cocinas">Cocinas</a></li>
+                    <li><a class="white-text" href="#!" title="Closets">Closets</a></li>
+                    <li><a class="white-text" href="#!" title="Puertas">Puertas</a></li>
+                    <li><a class="white-text" href="#!" title="Ba&ntilde;os">Ba&ntilde;os</a></li>
+                    <li><a class="white-text" href="#!" title="Contacto">Contacto</a></li>
+                    <li><a class="white-text" href="#!" title="Preguntas y Respuestas">PyR</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div>
+        <ul id="nav-mobile" class="side-nav">
+            <li><a href="#!"title="Comedores">Comedores</a></li>
+            <li><a href="#!"title="Cocinas">Cocinas</a></li>
+            <li><a href="#!"title="Closets">Closets</a></li>
+            <li><a href="#!"title="Puertas">Puertas</a></li>
+            <li><a href="#!"title="Ba&ntilde;os">Ba&ntilde;os</a></li>
+            <li><a href="#!"title="Contacto">Contacto</a></li>
+            <li><a href="#!"title="Preguntas y Respuestas">PyR</a></li>
+        </ul>
+    </div>
+</header>
+<main>
+    {% block fpss %}
+    {% endblock %}
+    <!--
+    <div class="col s12 m12 l12 xl12 fcarousel">
+        <picture>
+            <source srcset="img/img-xl-large-desktop-devices-1800.jpg, img/img-xl-large-desktop-devices-1800-hd.jpg 2x" alt="" media="(min-width: 1200px)">
+            <source srcset="img/img-l-desktop-devices-992-1199.jpg, img/img-l-desktop-devices-992-1199-hd 2x.jpg" media="(min-width: 992px) and (max-width: 1199px)">
+            <source srcset="img/img-m-tablet-devices-601-991.jpg, img/img-m-tablet-devices-601-991-hd.jpg 2x" alt="" media="(min-width: 601px) and (max-width: 991px)">
+            <source srcset="img/img-s-movil-devices-600.jpg, img/img-s-movil-devices-600-hd.jpg 2x" alt="" media="(min-width: 600px)">
+                <img class="carousel-cell carousel_cell_img" srcset="img/img-s-movil-devices-600.jpg, img/img-s-movil-devices-600-hd.jpg 2x" alt="">
+        </picture>
+        <picture>
+            <source srcset="img/img-xl-01.jpg, img/img-xl-01.jpg 2x" alt="" media="(min-width: 1200px)">
+            <source srcset="img/img-l-01.jpg, img/img-l-01.jpg 2x." alt="" media="(min-width: 992px) and (max-width: 1199px)">
+            <source srcset="img/img-m-01.jpg, img/img-m-01.jpg 2x" alt="" media="(min-width: 601px) and (max-width: 991px)">
+            <source srcset="img/img-s-01.jpg, img/img-s-01.jpg 2x" alt="" media="(min-width: 600px)">
+                <img class="carousel-cell carousel_cell_img" srcset="img/img-s-01.jpg, img/img-s-01-hd.jpg 2x" alt="">
+        </picture>
+        <picture>
+            <source srcset="img/img-xl-02.jpg, img/img-xl-02.jpg 2x" alt="" media="(min-width: 1200px)">
+            <source srcset="img/img-l-02.jpg, img/img-l-02.jpg 2x." alt="" media="(min-width: 992px) and (max-width: 1199px)">
+            <source srcset="img/img-m-02.jpg, img/img-m-02.jpg 2x" alt="" media="(min-width: 601px) and (max-width: 991px)">
+            <source srcset="img/img-s-02.jpg, img/img-s-02.jpg 2x" alt="" media="(min-width: 600px)">
+                <img class="carousel-cell carousel_cell_img" srcset="img/img-s-02.jpg, img/img-s-02-hd.jpg 2x" alt="">
+        </picture>
+        <picture>
+            <source srcset="img/img-xl-03.jpg, img/img-xl-03.jpg 2x" alt="" media="(min-width: 1200px)">
+            <source srcset="img/img-l-03.jpg, img/img-l-03.jpg 2x." alt="" media="(min-width: 992px) and (max-width: 1199px)">
+            <source srcset="img/img-m-03.jpg, img/img-m-03.jpg 2x" alt="" media="(min-width: 601px) and (max-width: 991px)">
+            <source srcset="img/img-s-03.jpg, img/img-s-03.jpg 2x" alt="" media="(min-width: 600px)">
+                <img class="carousel-cell carousel_cell_img" srcset="img/img-s-03.jpg, img/img-s-03-hd.jpg 2x" alt="">
+        </picture>
+        <picture>
+            <source srcset="img/img-xl-04.jpg, img/img-xl-04.jpg 2x" alt="" media="(min-width: 1200px)">
+            <source srcset="img/img-l-04.jpg, img/img-l-04.jpg 2x." alt="" media="(min-width: 992px) and (max-width: 1199px)">
+            <source srcset="img/img-m-04.jpg, img/img-m-04.jpg 2x" alt="" media="(min-width: 601px) and (max-width: 991px)">
+            <source srcset="img/img-s-04.jpg, img/img-s-04.jpg 2x" alt="" media="(min-width: 600px)">
+                <img class="carousel-cell carousel_cell_img" srcset="img/img-s-04.jpg, img/img-s-04-hd.jpg 2x" alt="">
+        </picture>
+    </div>
+    -->
+</main>
+<footer class="page-footer">
+    <div class="awesome footer-copyright">
+        <div class="container piedepagina_copyright">
+            <span>
+                © 2018 Copyright Text
+            </span>
+            <span>powered by 
+                <a class="linux" href="http://www.linux.com/" target="_blank" title="linux"><i class="fa fa-linux" aria-hidden="true"></i></a>
+                <a class="django" href="https://www.djangoproject.com/" target="_blank" title="django The Framework"><img class="django-ico" src="https://www.djangoproject.com/s/img/favicon.6dbf28c0650e.ico" alt=""></a>
+                <a class="awsamazon" href="http://aws.amazon.com/" target="_blank" title="amazon web services"><i class="fa fa-amazon" aria-hidden="true"></i></a>
+            </span>
+            <span class="grey-text text-lighten-4">
+                design by
+                <a href="mailto:nomackayu@gmail.com">nomackayu</a>  with
+                    <i class="red-text fa fa-heart"></i>
+            </span>
+        </div>
+    </div><!-- ./blue-grey darken-4 footer-copyright -->
+</footer>
+<!--  Scripts-->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script> -->
+    <!-- <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script> -->
+    <script src="{% static "js/jquery.js" %}"></script>
+    <script src="{% static "js/materialize.js" %}"></script>
+    <script src="{% static  "js/flickity.pkgd.js" %}"></script>
+    
+    <!-- <script src="js/init.js"></script> -->
+    <script>
+        $( document ).ready(function(){
+            $(".button-collapse").sideNav();
+        });
+        $('.fcarousel').flickity({
+            setGallerySize: false,
+            pageDots: false,
+            wrapAround: true,
+            //cellAlign: 'center',
+            imagesLoaded: true,
+        });
+    </script>
+  </body>
+</html>

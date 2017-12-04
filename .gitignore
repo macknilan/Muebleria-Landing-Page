@@ -1,5 +1,10 @@
-# No images
+
+# PERSONAL SETTINGS
 *.jpg
+COLLECT_STATIC/
+db.sqlite3
+*_initial.py
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

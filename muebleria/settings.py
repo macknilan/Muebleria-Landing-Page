@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'categorias',
     'muebles',
+    'sorl.thumbnail',
 ]
 
 MIDDLEWARE = [
@@ -127,6 +128,8 @@ MEDIA_URL = '/media/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+THUMBNAIL_ALTERNATIVE_RESOLUTIONS = [2]
 
 """
 SE ANADE LA RUTA PARA STATIC Y MEDIA FILES AFUERA DE CARPETA DE PROYECTO EN CARPETA COLLECT_STATIC

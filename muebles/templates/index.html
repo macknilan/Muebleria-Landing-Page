@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load thumbnail %}
+{% comment %} SLIDE QUE SE MUESTRA PAGINA DE INICIO SLIDE {% endcomment %}
+{% block title %} Muebles y Dise&ntilde;os de Madera del Centro  {% endblock %}
+{% block fpss %}
+
+<div class="col s12 m12 l12 xl12 fcarousel">
+        {% for picturescat in pictures_fpss %}
+            <picture>
+                <source {% thumbnail picturescat.imagen_categoria "1800" quality="100" as imagendecategoria %} srcset="{{imagendecategoria.url}}, {{imagendecategoria.url|resolution:"2x"}}"  alt="" media="(min-width:1200px)">{% endthumbnail %}
+                <source {% thumbnail picturescat.imagen_categoria "1199" quality="100" as imagendecategoria %} srcset="{{imagendecategoria.url}}, {{imagendecategoria.url|resolution:"2x"}}"  alt="" media="(min-width: 992px) and (max-width: 1199px)">{% endthumbnail %}
+                <source {% thumbnail picturescat.imagen_categoria "991" quality="100" as imagendecategoria %} srcset="{{imagendecategoria.url}}, {{imagendecategoria.url|resolution:"2x"}}"  alt="" media="(min-width: 601px) and (max-width: 991px)">{% endthumbnail %}
+                <source {% thumbnail picturescat.imagen_categoria "600" quality="100" as imagendecategoria %} srcset="{{imagendecategoria.url}}, {{imagendecategoria.url|resolution:"2x"}}"  alt="" media="(min-width: 600px)">{% endthumbnail %}
+                    <img class="carousel-cell carousel_cell_img" {% thumbnail picturescat.imagen_categoria "600" quality="100" as imagendecategoria %} srcset="{{imagendecategoria.url|resolution:"2x"}}" alt="" {% endthumbnail %}>
+            </picture>
+        {% endfor %}
+</div>
+
+<!-- 
+<div class="col s12 m12 l12 xl12 fcarousel">
+        <picture>
+            <source srcset="img/img-xl-large-desktop-devices-1800.jpg, img/img-xl-large-desktop-devices-1800-hd.jpg 2x" alt="" media="(min-width: 1200px)">
+            <source srcset="img/img-l-desktop-devices-992-1199.jpg, img/img-l-desktop-devices-992-1199-hd 2x.jpg" media="(min-width: 992px) and (max-width: 1199px)">
+            <source srcset="img/img-m-tablet-devices-601-991.jpg, img/img-m-tablet-devices-601-991-hd.jpg 2x" alt="" media="(min-width: 601px) and (max-width: 991px)">
+            <source srcset="img/img-s-movil-devices-600.jpg, img/img-s-movil-devices-600-hd.jpg 2x" alt="" media="(min-width: 600px)">
+                <img class="carousel-cell carousel_cell_img" srcset="img/img-s-movil-devices-600.jpg, img/img-s-movil-devices-600-hd.jpg 2x" alt="">
+        </picture>
+</div>
+-->
+{% endblock %}
