@@ -2,8 +2,8 @@
 # PERSONAL SETTINGS
 *.jpg
 COLLECT_STATIC/
-db.sqlite3
-*_initial.py
+*.sqlite3
+*initial.py
 
 
 # Byte-compiled / optimized / DLL files
