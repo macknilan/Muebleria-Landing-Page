@@ -16,15 +16,3 @@ class HomeView(TemplateView):
         context = super(HomeView, self).get_context_data(**kwargs)
         context['pictures_fpss'] = Categoria.objects.all()
         return context
-
-
-
-
-
-
-
-
-
-
-
-

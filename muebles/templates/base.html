@@ -21,10 +21,10 @@
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper container">
-                <a href="#" class="brand-logo titulo">Muebles y Dise&ntilde;os <br> en Madera</a>
+                <a href="{% url 'muebles:home' %}" class="brand-logo titulo">Muebles y Dise&ntilde;os <br> en Madera</a>
                 <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a class="white-text" href="#!" title="Comedores">Comedores</a></li>
+                    <li><a class="white-text" href="{% url 'categorias:comedores' %}" title="Comedores">Comedores</a></li>
                     <li><a class="white-text" href="#!" title="Cocinas">Cocinas</a></li>
                     <li><a class="white-text" href="#!" title="Closets">Closets</a></li>
                     <li><a class="white-text" href="#!" title="Puertas">Puertas</a></li>
@@ -37,7 +37,7 @@
     </div>
     <div>
         <ul id="nav-mobile" class="side-nav">
-            <li><a href="#!"title="Comedores">Comedores</a></li>
+            <li><a href="{% url 'categorias:comedores' %}"title="Comedores">Comedores</a></li>
             <li><a href="#!"title="Cocinas">Cocinas</a></li>
             <li><a href="#!"title="Closets">Closets</a></li>
             <li><a href="#!"title="Puertas">Puertas</a></li>
@@ -47,9 +47,11 @@
         </ul>
     </div>
 </header>
-<main>
+<main class="fondo_de_madera">
     {% block fpss %}
-    {% endblock %}
+    {% endblock fpss %}
+    {% block CategoryTemplate %}
+    {% endblock CategoryTemplate %}
     <!--
     <div class="col s12 m12 l12 xl12 fcarousel">
         <picture>
@@ -112,10 +114,10 @@
 <!--  Scripts-->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script> -->
-    <!-- <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script> -->
+    <!-- <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script> <-->
     <script src="{% static "js/jquery.js" %}"></script>
     <script src="{% static "js/materialize.js" %}"></script>
-    <script src="{% static  "js/flickity.pkgd.js" %}"></script>
+    <script src="{% static "js/flickity.pkgd.js" %}"></script>
     
     <!-- <script src="js/init.js"></script> -->
     <script>
@@ -130,5 +132,6 @@
             imagesLoaded: true,
         });
     </script>
+<!--  Scripts-->
   </body>
 </html>

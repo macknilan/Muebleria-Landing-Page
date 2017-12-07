@@ -55,6 +55,13 @@ main {
     width: 1rem;
 }
 
+.fondo_de_madera
+{
+    background-image: url("/img/wood_bg.png");
+    /*background-repeat: repeat-x;*/
+}
+
+
 
 /*
 -------------------------------------------------------------------
