@@ -18,3 +18,4 @@ class ComedoresListView(ListView):
     def get_queryset(self):
         queryset = super(ComedoresListView, self).get_queryset()
         return queryset.filter(categoria__cat_mueble="comedores")
+

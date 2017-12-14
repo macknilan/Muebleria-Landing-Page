@@ -21,8 +21,9 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'', include('categorias.urls', namespace='categorias')),
     url(r'', include('muebles.urls', namespace='muebles')),
+    url(r'', include('categorias.urls', namespace='categorias')),
+
 ]
 
 
