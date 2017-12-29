@@ -1,0 +1,35 @@
+{% comment %} 
+ <!-- ARCHIVO QUE SIRVE PARA LA PAGINACIÒN DE LA LISTA DE MUEBLES EN:
+ PuertasCategoryTemplateView.html
+ ComedoresCategoryTemplateView.html
+ CocinasCategoryTemplateView.html
+ ClosetsCategoryTemplateView.html
+ BanosCategoryTemplateView.html
+ --> 
+ {% endcomment %}
+<div class="container">
+    <div class="row">
+        {% if is_paginated %}
+            <ul class="clear-after reset plain">
+                {% if page_obj.has_previous %}
+                    <div class="waves-effect left">
+                        <a href="?page={{ page_obj.previous_page_number }}">
+                            <i class="small material-icons">arrow_back</i></a>
+                    </div>
+                {% else %}
+                    <div class="waves-effect col s1 m1 l1">
+                        <a href="#" class="button transparent aqua">
+                            <i class="small material-icons">arrow_back</i></a>
+                    </div>
+                {% endif %}
+                {% if page_obj.has_next %}
+                    <div class="waves-effect right">
+                        <a href="?page={{ page_obj.next_page_number }}">
+                                <i class="small material-icons">arrow_forward</i></a>
+                    </div>
+                {% endif %}
+            </ul>
+        {% endif %}
+    </div><!-- row -->
+</div><!-- container -->
+
