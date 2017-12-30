@@ -8,25 +8,23 @@
  --> 
  {% endcomment %}
 <div class="container">
-    <div class="row">
+    <div class="row center-align">
         {% if is_paginated %}
-            <ul class="clear-after reset plain">
+            <ul class="pagination">
                 {% if page_obj.has_previous %}
-                    <div class="waves-effect left">
+                    <li>
                         <a href="?page={{ page_obj.previous_page_number }}">
-                            <i class="small material-icons">arrow_back</i></a>
-                    </div>
-                {% else %}
-                    <div class="waves-effect col s1 m1 l1">
-                        <a href="#" class="button transparent aqua">
-                            <i class="small material-icons">arrow_back</i></a>
-                    </div>
+                            <i class="material-icons">chevron_left</i></a>
+                    </li>
                 {% endif %}
+                    <li class="active">
+                        <a href="#!">{{ page_obj.number }} de {{ page_obj.paginator.num_pages }}
+                    </li>
                 {% if page_obj.has_next %}
-                    <div class="waves-effect right">
+                    <li>
                         <a href="?page={{ page_obj.next_page_number }}">
-                                <i class="small material-icons">arrow_forward</i></a>
-                    </div>
+                                <i class="material-icons">chevron_right</i></a>
+                    </li>
                 {% endif %}
             </ul>
         {% endif %}

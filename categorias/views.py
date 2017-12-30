@@ -12,7 +12,7 @@ class ComedoresListView(ListView):
     """
     model = Mueble
     template_name = "ComedoresCategoryTemplateView.html"
-    paginate_by = 2
+    paginate_by = 1
     ordering = ["id"]
 
     def get_queryset(self):
