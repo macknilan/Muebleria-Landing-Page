@@ -6,21 +6,26 @@
         <div class="container">
             <div class="row">
                 {% for mueble in object_list %}
-                    {% thumbnail mueble.foto_1 "1600x1200" as img_1_cat %}
+
                             <div class="col s12 m12 l6 x6">
                                 <div class="card">
                                     <div class="card-image">
                                         <a href="!#">
-                                            <img src="{{ img_1_cat.url }} ">
+                                            <picture>
+                                                <source {% thumbnail mueble.foto_1 "599" as img_1_mueble %} srcset="{{img_1_mueble.url}}, {{img_1_mueble.url|resolution:"2x"}}" alt="" media="(min-width: 992px) and (max-width: 1199px)">{% endthumbnail %}
+                                                <source {% thumbnail mueble.foto_1 "991" as img_1_mueble %} srcset="{{img_1_mueble.url}}, {{img_1_mueble.url|resolution:"2x"}}" alt="" media="(min-width: 601px) and (max-width: 991px)">{% endthumbnail %}
+                                                <source {% thumbnail mueble.foto_1 "600" as img_1_mueble %} srcset="{{img_1_mueble.url}}, {{img_1_mueble.url|resolution:"2x"}}" alt="" media="(min-width: 600px)">{% endthumbnail %}
+                                                    <img {% thumbnail mueble.foto_1 "600" as img_1_mueble %} srcset="{{img_1_mueble.url}}, {{img_1_mueble.url|resolution:"2x"}}" alt=""> {% endthumbnail %}
+                                            </picture>
                                         </a>
                                         <span class="card-title"> {{ mueble.modelo }} </span>
-                                    </div>
-                                </div>
-                            </div>
-                    {% endthumbnail %}
+                                    </div><!-- /card-image -->
+                                </div><!-- /card -->
+                            </div><!-- /col s12 m12 l6 x6 -->
+
                 {% endfor %}
             </div><!-- /row -->
         </div><!-- /container -->
     {% include 'paginator_muebles_list.html' %}
-
 {% endblock CategoryTemplate %}
+
