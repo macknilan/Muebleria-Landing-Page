@@ -1,17 +1,82 @@
 {% extends 'base.html' %}
 {% load thumbnail %}
+{% load humanize %}
 {% comment %} PLANTILLA PARA MOSTRAR A DETALLE LOS MUEBLES {% endcomment %}
 {% block title %} Muebles {% endblock title %}
 {% block DetailTemplate %}
 
 <div class="container">
-    <div class="row">
         <!-- BREADCUMBS -->
 
         <!-- BREADCUMBS -->
-        <h1>{{ object.modelo }}</h1>
-    </div>
-</div>
+        <article>
+            <section>
+                <div class="row">
+                    <h1>{{ object.modelo }}</h1>
+                    <p class="flow-text">{{ object.descripcion|safe }}</p>
+                    <p class="flow-text">{{ object.dimensiones|safe }}</p>
+                    <h3>${{ object.precio|intcomma }}</h3>
+                </div><!-- /row -->
+            </section>
+            <section>
+                <div class="row">
+                    <div class="col s12 m12 l12 xl12">
+                        <picture>
+                            <source {% thumbnail object.foto_1 "1800" as foto_uno %} srcset="{{foto_uno.url}}, {{foto_uno.url|resolution:"2x"}}" alt="{{ object.modelo }}" title="{{ object.modelo }}" media="(min-width:1200px)">{% endthumbnail %}
+                            <source {% thumbnail object.foto_1 "1199" as foto_uno %} srcset="{{foto_uno.url}}, {{foto_uno.url|resolution:"2x"}}" alt="{{ object.modelo }}" title="{{ object.modelo }}" media="(min-width: 992px) and (max-width: 1199px)">{% endthumbnail %}
+                            <source {% thumbnail object.foto_1 "991" as foto_uno %} srcset="{{foto_uno.url}}, {{foto_uno.url|resolution:"2x"}}" alt="{{ object.modelo }}" title="{{ object.modelo }}" media="(min-width: 601px) and (max-width: 991px)">{% endthumbnail %}
+                            <source {% thumbnail object.foto_1 "600" as foto_uno %} srcset="{{foto_uno.url}}, {{foto_uno.url|resolution:"2x"}}" alt="{{ object.modelo }}" title="{{ object.modelo }}" media="(min-width: 600px)">{% endthumbnail %}
+                                <img class="responsive-img z-depth-5 z-depth-5" {% thumbnail object.foto_1 "600" as foto_uno %} srcset="{{foto_uno.url}}, {{foto_uno.url|resolution:"2x"}}" alt="{{ object.modelo }}" title="{{ object.modelo }}"> {% endthumbnail %}
+                        </picture>
+                    </div>
+                </div><!-- /row -->
+                <div class="row">
+                    <div class="col s12 m12 l12 xl12">
+                        <picture>
+                            <source {% thumbnail object.foto_2 "1800" as foto_uno %} srcset="{{foto_uno.url}}, {{foto_uno.url|resolution:"2x"}}" alt="{{ object.modelo }}" title="{{ object.modelo }}" media="(min-width:1200px)">{% endthumbnail %}
+                            <source {% thumbnail object.foto_2 "1199" as foto_uno %} srcset="{{foto_uno.url}}, {{foto_uno.url|resolution:"2x"}}" alt="{{ object.modelo }}" title="{{ object.modelo }}" media="(min-width: 992px) and (max-width: 1199px)">{% endthumbnail %}
+                            <source {% thumbnail object.foto_2 "991" as foto_uno %} srcset="{{foto_uno.url}}, {{foto_uno.url|resolution:"2x"}}" alt="{{ object.modelo }}" title="{{ object.modelo }}" media="(min-width: 601px) and (max-width: 991px)">{% endthumbnail %}
+                            <source {% thumbnail object.foto_2 "600" as foto_uno %} srcset="{{foto_uno.url}}, {{foto_uno.url|resolution:"2x"}}" alt="{{ object.modelo }}" title="{{ object.modelo }}" media="(min-width: 600px)">{% endthumbnail %}
+                                <img class="responsive-img z-depth-5" {% thumbnail object.foto_2 "600" as foto_uno %} srcset="{{foto_uno.url}}, {{foto_uno.url|resolution:"2x"}}" alt="{{ object.modelo }}" title="{{ object.modelo }}"> {% endthumbnail %}
+                        </picture>
+                    </div>
+                </div><!-- /row -->
+                <div class="row">
+                    <div class="col s12 m12 l12 xl12">
+                        <picture>
+                            <source {% thumbnail object.foto_3 "1800" as foto_uno %} srcset="{{foto_uno.url}}, {{foto_uno.url|resolution:"2x"}}" alt="{{ object.modelo }}" title="{{ object.modelo }}" media="(min-width:1200px)">{% endthumbnail %}
+                            <source {% thumbnail object.foto_3 "1199" as foto_uno %} srcset="{{foto_uno.url}}, {{foto_uno.url|resolution:"2x"}}" alt="{{ object.modelo }}" title="{{ object.modelo }}" media="(min-width: 992px) and (max-width: 1199px)">{% endthumbnail %}
+                            <source {% thumbnail object.foto_3 "991" as foto_uno %} srcset="{{foto_uno.url}}, {{foto_uno.url|resolution:"2x"}}" alt="{{ object.modelo }}" title="{{ object.modelo }}" media="(min-width: 601px) and (max-width: 991px)">{% endthumbnail %}
+                            <source {% thumbnail object.foto_3 "600" as foto_uno %} srcset="{{foto_uno.url}}, {{foto_uno.url|resolution:"2x"}}" alt="{{ object.modelo }}" title="{{ object.modelo }}" media="(min-width: 600px)">{% endthumbnail %}
+                                <img class="responsive-img z-depth-5" {% thumbnail object.foto_3 "600" as foto_uno %} srcset="{{foto_uno.url}}, {{foto_uno.url|resolution:"2x"}}" alt="{{ object.modelo }}" title="{{ object.modelo }}"> {% endthumbnail %}
+                        </picture>
+                    </div>
+                </div><!-- /row -->
+                <div class="row">
+                    <div class="col s12 m12 l12 xl12">
+                        <picture>
+                            <source {% thumbnail object.foto_4 "1800" as foto_uno %} srcset="{{foto_uno.url}}, {{foto_uno.url|resolution:"2x"}}" alt="{{ object.modelo }}" title="{{ object.modelo }}" media="(min-width:1200px)">{% endthumbnail %}
+                            <source {% thumbnail object.foto_4 "1199" as foto_uno %} srcset="{{foto_uno.url}}, {{foto_uno.url|resolution:"2x"}}" alt="{{ object.modelo }}" title="{{ object.modelo }}" media="(min-width: 992px) and (max-width: 1199px)">{% endthumbnail %}
+                            <source {% thumbnail object.foto_4 "991" as foto_uno %} srcset="{{foto_uno.url}}, {{foto_uno.url|resolution:"2x"}}" alt="{{ object.modelo }}" title="{{ object.modelo }}" media="(min-width: 601px) and (max-width: 991px)">{% endthumbnail %}
+                            <source {% thumbnail object.foto_4 "600" as foto_uno %} srcset="{{foto_uno.url}}, {{foto_uno.url|resolution:"2x"}}" alt="{{ object.modelo }}" title="{{ object.modelo }}" media="(min-width: 600px)">{% endthumbnail %}
+                                <img class="responsive-img z-depth-5" {% thumbnail object.foto_4 "600" as foto_uno %} srcset="{{foto_uno.url}}, {{foto_uno.url|resolution:"2x"}}" alt="{{ object.modelo }}" title="{{ object.modelo }}"> {% endthumbnail %}
+                        </picture>
+                    </div>
+                </div><!-- /row -->
+                <div class="row">
+                    <div class="col s12 m12 l12 xl12">
+                        <picture>
+                            <source {% thumbnail object.foto_5 "1800" as foto_uno %} srcset="{{foto_uno.url}}, {{foto_uno.url|resolution:"2x"}}" alt="{{ object.modelo }}" title="{{ object.modelo }}" media="(min-width:1200px)">{% endthumbnail %}
+                            <source {% thumbnail object.foto_5 "1199" as foto_uno %} srcset="{{foto_uno.url}}, {{foto_uno.url|resolution:"2x"}}" alt="{{ object.modelo }}" title="{{ object.modelo }}" media="(min-width: 992px) and (max-width: 1199px)">{% endthumbnail %}
+                            <source {% thumbnail object.foto_5 "991" as foto_uno %} srcset="{{foto_uno.url}}, {{foto_uno.url|resolution:"2x"}}" alt="{{ object.modelo }}" title="{{ object.modelo }}" media="(min-width: 601px) and (max-width: 991px)">{% endthumbnail %}
+                            <source {% thumbnail object.foto_5 "600" as foto_uno %} srcset="{{foto_uno.url}}, {{foto_uno.url|resolution:"2x"}}" alt="{{ object.modelo }}" title="{{ object.modelo }}" media="(min-width: 600px)">{% endthumbnail %}
+                                <img class="responsive-img z-depth-5" {% thumbnail object.foto_5 "600" as foto_uno %} srcset="{{foto_uno.url}}, {{foto_uno.url|resolution:"2x"}}" alt="{{ object.modelo }}" title="{{ object.modelo }}"> {% endthumbnail %}
+                        </picture>
+                    </div>
+                </div><!-- /row -->
+            </section>
+        </article>
+</div><!-- /container -->
 
 
 
