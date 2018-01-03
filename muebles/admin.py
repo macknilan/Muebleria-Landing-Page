@@ -11,5 +11,5 @@ class MuebleAdmin(admin.ModelAdmin):
     list_filter = ('modelo', 'categoria', )
     search_fields = ['descripcion', 'modelo', ]
     readonly_fields = ('slug', )
-    list_editable = ('modelo', 'descripcion', 'dimensiones', 'categoria', 'oferta', 'precio', )
+    # list_editable = ('modelo', 'descripcion', 'dimensiones', 'categoria', 'oferta', 'precio', )
     # prepopulated_fields = {"slug": ("modelo",)}
