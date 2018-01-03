@@ -1,9 +1,13 @@
 # PERSONAL SETTINGS
+#
+# NO SUBIR IMAGENES
 *.jpg
+# NO SUBIR CARPETA(s)
 COLLECT_STATIC/
 migrations/
+
+# IGNORAR ARCHIVO BD db.sqlite3   
 /db/*.sqlite3
-/db/*.sqlite3-journal
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
