@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
     <meta name="description" content="Muebles y Dise&ntilde;os de Madera del Centro">
 
-    <title>Muebles y Dise&ntilde;os de Madera del Centro</title>
+    <title>Muebles y Dise&ntilde;os de Madera del Centro</title>    
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Italianno" rel="stylesheet">
     <script src="https://use.fontawesome.com/e9fc25ef12.js"></script>
@@ -18,34 +18,7 @@
 </head>
 <body>
 <header>
-    <div class="navbar-fixed">
-        <nav>
-            <div class="nav-wrapper container">
-                <a href="{% url 'muebles:home' %}" class="brand-logo titulo">Muebles y Dise&ntilde;os <br> en Madera</a>
-                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a class="white-text" href="{% url 'categorias:comedores' %}" title="Comedores">Comedores</a></li>
-                    <li><a class="white-text" href="#!" title="Cocinas">Cocinas</a></li>
-                    <li><a class="white-text" href="#!" title="Closets">Closets</a></li>
-                    <li><a class="white-text" href="#!" title="Puertas">Puertas</a></li>
-                    <li><a class="white-text" href="#!" title="Ba&ntilde;os">Ba&ntilde;os</a></li>
-                    <li><a class="white-text" href="#!" title="Contacto">Contacto</a></li>
-                    <li><a class="white-text" href="#!" title="Preguntas y Respuestas">PyR</a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-    <div>
-        <ul id="nav-mobile" class="side-nav">
-            <li><a href="{% url 'categorias:comedores' %}" title="Comedores">Comedores</a></li>
-            <li><a href="#!" title="Cocinas">Cocinas</a></li>
-            <li><a href="#!" title="Closets">Closets</a></li>
-            <li><a href="#!" title="Puertas">Puertas</a></li>
-            <li><a href="#!" title="Ba&ntilde;os">Ba&ntilde;os</a></li>
-            <li><a href="#!" title="Contacto">Contacto</a></li>
-            <li><a href="#!" title="Preguntas y Respuestas">PyR</a></li>
-        </ul>
-    </div>
+    {% include 'menubar.html' %}
 </header>
 <main class="fondo_de_madera">
     {% block fpss %}
@@ -96,23 +69,7 @@
     -->
 </main>
 <footer class="page-footer">
-    <div class="awesome footer-copyright">
-        <div class="container piedepagina_copyright">
-            <span>
-                © 2018 Copyright Text
-            </span>
-            <span>powered by 
-                <a class="linux" href="http://www.linux.com/" target="_blank" title="linux"><i class="fa fa-linux" aria-hidden="true"></i></a>
-                <a class="django" href="https://www.djangoproject.com/" target="_blank" title="django The Framework"><img class="django-ico" src="https://www.djangoproject.com/s/img/favicon.6dbf28c0650e.ico" alt=""></a>
-                <a class="digitalocean" href="https://www.digitalocean.com/" target="_blank" title="Digital Ocean"><img style="width: 16px" src="https://www.digitalocean.com/favicon-97c70234.png"></a>
-            </span>
-            <span class="grey-text text-lighten-4">
-                design by
-                <a href="mailto:nomackayu@gmail.com">nomackayu</a>  with
-                    <i class="red-text fa fa-heart"></i>
-            </span>
-        </div>
-    </div><!-- ./blue-grey darken-4 footer-copyright -->
+    {% include 'footer.html' %}
 </footer>
 <!--  Scripts-->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
@@ -121,20 +78,7 @@
     <script src="{% static "js/jquery.js" %}"></script>
     <script src="{% static "js/materialize.js" %}"></script>
     <script src="{% static "js/flickity.pkgd.js" %}"></script>
-    
-    <!-- <script src="js/init.js"></script> -->
-    <script>
-        $( document ).ready(function(){
-            $(".button-collapse").sideNav();
-        });
-        $('.fcarousel').flickity({
-            setGallerySize: false,
-            pageDots: false,
-            wrapAround: true,
-            //cellAlign: 'center',
-            imagesLoaded: true,
-        });
-    </script>
+    <script src="{% static "js/myjs.js" %}"></script>
 <!--  Scripts-->
   </body>
 </html>
