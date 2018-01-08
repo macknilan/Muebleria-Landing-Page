@@ -8,13 +8,15 @@
     <!-- BREADCUMBS -->
     <div class="nav-wrapper">
         <div class="col s12">
-            <h6>                
-                <a href="{% url 'categorias:comedores' %}" class="breadcrumb breadcrumbcolorshadow">{{ object.categoria|upper }}</a>
+            <h6>
+                {% if "comedores" in object.get_absolute_url %}
+                    <a href="{% url 'categorias:comedores' %}" class="breadcrumb breadcrumbcolorshadow">{{ object.categoria|upper }}</a>
+                {% endif %}
                 <a href="#!" class="breadcrumb breadcrumbcolorshadow">{{ object.modelo|title }}</a>
             </h6>
         </div>
     </div>
-    <!-- BREADCUMBS -->
+    <!-- /BREADCUMBS -->
     <article>
         <section>
             <div class="row">
