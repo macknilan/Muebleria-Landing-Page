@@ -19,6 +19,7 @@ class ComedoresListView(ListView):
         queryset = super(ComedoresListView, self).get_queryset()
         return queryset.filter(categoria__cat_mueble="comedores")
 
+
 class CocinasListView(ListView):
     """
     CLASE PARA DESPLEGAR LOS COCINAS EN LISTA

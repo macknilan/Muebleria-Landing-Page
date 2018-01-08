@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load thumbnail %}
+{% comment %} PLANTILLA PARA MOSTRAR LAS CATEGORIAS DE LOS MUEBLES {% endcomment %}
+{% block title %} Ba&ntilde;os {% endblock %}
+{% block CategoryTemplate %}
+        <div class="container">
+            <div class="row">
+                {% for mueble in object_list %}
+                    <div class="col s12 m12 l6 x6">
+                        <div class="card">
+                            <div class="card-image">
+                                <a href=" {% url 'muebles:detailbanos' mueble.slug %} ">
+                                    <picture>
+                                        <source {% thumbnail mueble.foto_1 "599" as img_1_mueble %} srcset="{{ img_1_mueble.url }}, {{ img_1_mueble.url|resolution:"2x" }}" alt="{{ mueble.modelo }}" title="{{ mueble.modelo }}" media="(min-width: 992px) and (max-width: 1199px)">{% endthumbnail %}
+                                        <source {% thumbnail mueble.foto_1 "991" as img_1_mueble %} srcset="{{ img_1_mueble.url }}, {{ img_1_mueble.url|resolution:"2x" }}" alt="{{ mueble.modelo }}" title="{{ mueble.modelo }}" media="(min-width: 601px) and (max-width: 991px)">{% endthumbnail %}
+                                        <source {% thumbnail mueble.foto_1 "600" as img_1_mueble %} srcset="{{ img_1_mueble.url }}, {{ img_1_mueble.url|resolution:"2x" }}" alt="{{ mueble.modelo }}" title="{{ mueble.modelo }}" media="(min-width: 600px)">{% endthumbnail %}
+                                            <img {% thumbnail mueble.foto_1 "600" as img_1_mueble %} srcset="{{ img_1_mueble.url }}, {{ img_1_mueble.url|resolution:"2x" }}" alt="{{ mueble.modelo }}" title="{{ mueble.modelo }}"> {% endthumbnail %}
+                                    </picture>
+                                </a>
+                                <span class="card-title"> {{ mueble.modelo }} </span>
+                            </div><!-- /card-image -->
+                        </div><!-- /card -->
+                    </div><!-- /col s12 m12 l6 x6 -->
+                {% endfor %}
+            </div><!-- /row -->
+        </div><!-- /container -->
+    {% include 'paginator_muebles_list.html' %}
+{% endblock CategoryTemplate %}
