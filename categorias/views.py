@@ -30,7 +30,7 @@ class CocinasListView(ListView):
     ordering = ["id"]
 
     def get_queryset(self):
-        queryset = super(ComedoresListView, self).get_queryset()
+        queryset = super(CocinasListView, self).get_queryset()
         return queryset.filter(categoria__cat_mueble="cocinas")
 
 
@@ -44,7 +44,7 @@ class ClosetsListView(ListView):
     ordering = ["id"]
 
     def get_queryset(self):
-        queryset = super(ComedoresListView, self).get_queryset()
+        queryset = super(ClosetsListView, self).get_queryset()
         return queryset.filter(categoria__cat_mueble="closets")
 
 
@@ -58,7 +58,7 @@ class PuertasListView(ListView):
     ordering = ["id"]
 
     def get_queryset(self):
-        queryset = super(ComedoresListView, self).get_queryset()
+        queryset = super(PuertasListView, self).get_queryset()
         return queryset.filter(categoria__cat_mueble="puertas")
 
 
@@ -72,5 +72,5 @@ class BanosListView(ListView):
     ordering = ["id"]
 
     def get_queryset(self):
-        queryset = super(ComedoresListView, self).get_queryset()
+        queryset = super(BanosListView, self).get_queryset()
         return queryset.filter(categoria__cat_mueble="banos")
