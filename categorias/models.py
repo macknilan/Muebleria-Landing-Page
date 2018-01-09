@@ -43,6 +43,7 @@ class Categoria(SlugMixin, models.Model):
         ('comedores', 'Comedores'),
         ('cocinas', 'Cocinas'),
         ('closets', 'Closets'),
+        ('puertas', 'Puertas'),
         ('banos', 'Banos'),
     )
     cat_mueble = models.CharField("Categoria del Mueble", max_length=10, choices=CAT_M, default='ninguno')

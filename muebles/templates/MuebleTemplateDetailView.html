@@ -9,7 +9,7 @@
     <div class="nav-wrapper">
         <div class="col s12">
             <h6>
-                {% if object.categoria|safe in object.get_absolute_url %}
+                {% if object.categoria|safe in request.path %}
                     <a href="{% url 'categorias:comedores' %}" class="breadcrumb breadcrumbcolorshadow">{{ object.categoria|upper }}</a>
                 {% endif %}
                 <a href="#!" class="breadcrumb breadcrumbcolorshadow">{{ object.modelo|title }}</a>
