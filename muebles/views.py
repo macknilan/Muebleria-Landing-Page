@@ -39,7 +39,7 @@ class ComedoresTemplateDetailView(DetailView):
 
 class CocinasTemplateDetailView(DetailView):
     """
-    CLASE PARA MOSTRAR LOS COMEDORES EN FORMA DE DETALLE/INDIVIDUAL
+    CLASE PARA MOSTRAR LOS COCINAS EN FORMA DE DETALLE/INDIVIDUAL
     """
     model = Mueble
     template_name = "MuebleTemplateDetailView.html"
@@ -57,7 +57,7 @@ class CocinasTemplateDetailView(DetailView):
 
 class ClosetsTemplateDetailView(DetailView):
     """
-    CLASE PARA MOSTRAR LOS COMEDORES EN FORMA DE DETALLE/INDIVIDUAL
+    CLASE PARA MOSTRAR LOS CLOSETS EN FORMA DE DETALLE/INDIVIDUAL
     """
     model = Mueble
     template_name = "MuebleTemplateDetailView.html"
@@ -75,7 +75,7 @@ class ClosetsTemplateDetailView(DetailView):
 
 class PuertasTemplateDetailView(DetailView):
     """
-    CLASE PARA MOSTRAR LOS COMEDORES EN FORMA DE DETALLE/INDIVIDUAL
+    CLASE PARA MOSTRAR LOS PUERTAS EN FORMA DE DETALLE/INDIVIDUAL
     """
     model = Mueble
     template_name = "MuebleTemplateDetailView.html"
@@ -93,7 +93,7 @@ class PuertasTemplateDetailView(DetailView):
 
 class BanosTemplateDetailView(DetailView):
     """
-    CLASE PARA MOSTRAR LOS COMEDORES EN FORMA DE DETALLE/INDIVIDUAL
+    CLASE PARA MOSTRAR LOS BAÑOS EN FORMA DE DETALLE/INDIVIDUAL
     """
     model = Mueble
     template_name = "MuebleTemplateDetailView.html"
