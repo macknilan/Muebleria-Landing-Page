@@ -6,23 +6,23 @@
 {% block DetailTemplate %}
 <div class="container">
     <!-- BREADCUMBS -->
-    <div class="nav-wrapper">
+    <div class="nav-wrapper breadcumbbkcolor">
         <div class="col s12">
             <h6>
                 {% if "comedores" in object.categoria|safe and request.path|safe %}
-                    <a href="{% url 'categorias:comedores' %}" class="breadcrumb breadcrumbcolorshadow">{{ object.categoria|title }}</a>
+                    <a href="{% url 'categorias:comedores' %}" class="breadcrumb breadcrumbcolorshadow" alt="{{ object.categoria|title }}" title="{{ object.categoria|title }}">{{ object.categoria|title }}</a>
                 {% endif %}
                 {% if "cocinas" in object.categoria|safe and request.path|safe %}
-                    <a href="{% url 'categorias:cocinas' %}" class="breadcrumb breadcrumbcolorshadow">{{ object.categoria|title }}</a>
+                    <a href="{% url 'categorias:cocinas' %}" class="breadcrumb breadcrumbcolorshadow" alt="{{ object.categoria|title }}" title="{{ object.categoria|title }}">{{ object.categoria|title }}</a>
                 {% endif %}
                 {% if "closets" in object.categoria|safe and request.path|safe %}
-                    <a href="{% url 'categorias:closets' %}" class="breadcrumb breadcrumbcolorshadow">{{ object.categoria|title }}</a>
+                    <a href="{% url 'categorias:closets' %}" class="breadcrumb breadcrumbcolorshadow" alt="{{ object.categoria|title }}" title="{{ object.categoria|title }}">{{ object.categoria|title }}</a>
                 {% endif %}
                 {% if "puertas" in object.categoria|safe and request.path|safe %}
-                    <a href="{% url 'categorias:puertas' %}" class="breadcrumb breadcrumbcolorshadow">{{ object.categoria|title }}</a>
+                    <a href="{% url 'categorias:puertas' %}" class="breadcrumb breadcrumbcolorshadow" alt="{{ object.categoria|title }}" title="{{ object.categoria|title }}">{{ object.categoria|title }}</a>
                 {% endif %}
                 {% if "banos" in object.categoria|safe and request.path|safe %}
-                    <a href="{% url 'categorias:banos' %}" class="breadcrumb breadcrumbcolorshadow">{{ object.categoria|title }}</a>
+                    <a href="{% url 'categorias:banos' %}" class="breadcrumb breadcrumbcolorshadow" alt="{{ object.categoria|title }}" title="{{ object.categoria|title }}">{{ object.categoria|title }}</a>
                 {% endif %}
                 <a href="#!" class="breadcrumb breadcrumbcolorshadow">{{ object.modelo|title }}</a>
 
@@ -110,27 +110,27 @@
             <!-- for PARA LISTAR EL NOMBRE DEL MUEBLE Y USARLO COMO LINK Y/O PAGINADOR -->
             {% for comedor in categoria_mueble_comedor %}
                 {% if "comedores" in request.path and object.modelo != comedor.modelo %}
-                    <span class="chip"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;&nbsp;<a href="{% url 'muebles:detailcomedores' comedor.slug %}" title="{{ comedor.modelo }}">{{ comedor.modelo }}</a></span>
+                    <span class="chip"><a href="{% url 'muebles:detailcomedores' comedor.slug %}" alt="{{ comedor.modelo }}" title="{{ comedor.modelo }}">{{ comedor.modelo }}</a>&nbsp;&nbsp;<i class="fa fa-link" aria-hidden="true"></i></span>
                 {% endif %}
             {% endfor %}
             {% for cocina in categoria_mueble_cocina %}
                 {% if "cocinas" in request.path and object.modelo != cocina.modelo %}
-                    <span class="chip"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;&nbsp;<a href="{% url 'muebles:detailcocinas' cocina.slug %}" title="{{ cocina.modelo }}">{{ cocina.modelo }}</a></span>
+                    <span class="chip"><a href="{% url 'muebles:detailcocinas' cocina.slug %}" alt="{{ cocina.modelo }}" title="{{ cocina.modelo }}">{{ cocina.modelo }}</a>&nbsp;&nbsp;<i class="fa fa-link" aria-hidden="true"></i></span>
                 {% endif %}
             {% endfor %}
             {% for closet in categoria_mueble_closets %}
                 {% if "closets" in request.path and object.modelo != closet.modelo %}
-                    <span class="chip"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;&nbsp;<a href="{% url 'muebles:detailclosets' closet.slug %}" title="{{ closet.modelo }}">{{ closet.modelo }}</a></span>
+                    <span class="chip"><a href="{% url 'muebles:detailclosets' closet.slug %}" alt="{{ closet.modelo }}" title="{{ closet.modelo }}">{{ closet.modelo }}</a>&nbsp;&nbsp;<i class="fa fa-link" aria-hidden="true"></i></span>
                 {% endif %}
             {% endfor %}
             {% for puerta in categoria_mueble_puertas %}
                 {% if "puertas" in request.path and object.modelo != puerta.modelo %}
-                    <span class="chip"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;&nbsp;<a href="{% url 'muebles:detailpuertas' puerta.slug %}" title="{{ puerta.modelo }}">{{ puerta.modelo }}</a></span>
+                    <span class="chip"><a href="{% url 'muebles:detailpuertas' puerta.slug %}" alt="{{ puerta.modelo }}" title="{{ puerta.modelo }}">{{ puerta.modelo }}</a>&nbsp;&nbsp;<i class="fa fa-link" aria-hidden="true"></i></span>
                 {% endif %}
             {% endfor %}
             {% for banos in categoria_mueble_banos %}
                 {% if "banos" in request.path and object.modelo != banos.modelo %}
-                    <span class="chip"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;&nbsp;<a href="{% url 'muebles:detailbanos' banos.slug %}" title="{{ banos.modelo }}">{{ banos.modelo }}</a></span>
+                    <span class="chip"><a href="{% url 'muebles:detailbanos' banos.slug %}" alt="{{ banos.modelo }}" title="{{ banos.modelo }}">{{ banos.modelo }}</a>&nbsp;&nbsp;<i class="fa fa-link" aria-hidden="true"></i></span>
                 {% endif %}
             {% endfor %}
         </div><!-- /row -->

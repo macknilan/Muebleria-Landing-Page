@@ -1,5 +1,6 @@
 from django.conf.urls import url
-from categorias.views import ComedoresListView, CocinasListView, ClosetsListView, PuertasListView, BanosListView
+from categorias.views import ComedoresListView, CocinasListView, ClosetsListView, \
+    PuertasListView, BanosListView, ContactFormView
 
 
 urlpatterns = [
@@ -8,4 +9,5 @@ urlpatterns = [
     url(r'^closets/$', ClosetsListView.as_view(), name='closets'),
     url(r'^puertas/$', PuertasListView.as_view(), name='puertas'),
     url(r'^banos/$', BanosListView.as_view(), name='banos'),
+    url(r'^contacto/$', ContactFormView.as_view(), name='contacto'),
 ]

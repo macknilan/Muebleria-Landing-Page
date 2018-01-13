@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
-
 from __future__ import unicode_literals
-from django.views.generic.list import ListView
+
+from django.views.generic import ListView, FormView, TemplateView
 from django.shortcuts import render
+from django.urls import reverse_lazy
+from django.core.mail import EmailMessage
 from muebles.models import Mueble
+from .forms import ContactForm
 
 
 class ComedoresListView(ListView):
@@ -74,3 +77,31 @@ class BanosListView(ListView):
     def get_queryset(self):
         queryset = super(BanosListView, self).get_queryset()
         return queryset.filter(categoria__cat_mueble="banos")
+
+
+class ContactFormView(FormView):
+    """
+    CLASE PARA EL FORMULARIO DE CONTACTO, MANDA MAIL POR MEDIO DE GMAIL,
+    NO SE OCUPA UN MODELO PARA GUARDARLO EN BD
+    """
+    template_name = 'ContactTemplateView.html'
+    form_class = ContactForm
+    success_url = reverse_lazy('muebles:home')
+
+    def form_valid(self, form):
+        subject = form.cleaned_data['subject']
+        sender = form.cleaned_data['sender']
+        message = form.cleaned_data['message']
+
+        body = (
+            "Nombre/Titulo: %s \n" % subject
+            + "Envia: %s \n" % sender
+            + "Mensaje: %s \n" % message
+        )
+
+        mail = EmailMessage(subject, body, sender, ['mail@gmail.com'], reply_to=['noreply@gmail.com'])
+        # import ipdb; ipdb.set_trace() # ESTO ES PARA DEBUGEAR
+        mail.send()
+
+        return super(ContactFormView, self).form_valid(form)
+

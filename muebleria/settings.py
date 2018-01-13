@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'categorias',
     'muebles',
     'sorl.thumbnail',
+    'snowpenguin.django.recaptcha2',
 ]
 
 MIDDLEWARE = [
@@ -142,4 +143,22 @@ STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "COLLECT_STATIC", "static_
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "COLLECT_STATIC", "media_root")
 
 """   [STATIC & MEDIA FILES]   """
+
+"""   [ EMAIL ]   """
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST = os.environ['EMAIL_HOST']
+EMAIL_HOST_USER = os.environ['EMAIL_HOST_USER']
+EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD']
+
+"""   [ EMAIL ]   """
+
+"""   [RECAPTCHA]   """
+
+RECAPTCHA_PUBLIC_KEY = os.environ['RECAPTCHA_PUBLIC_KEY']
+RECAPTCHA_PRIVATE_KEY = os.environ['RECAPTCHA_PRIVATE_KEY']
+
+"""   [RECAPTCHA]   """
 
