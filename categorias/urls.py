@@ -1,6 +1,6 @@
 from django.conf.urls import url
 from categorias.views import ComedoresListView, CocinasListView, ClosetsListView, \
-    PuertasListView, BanosListView, ContactFormView
+    PuertasListView, BanosListView, ContactFormView, PreguntasYRespuestasTemplate
 
 
 urlpatterns = [
@@ -10,4 +10,5 @@ urlpatterns = [
     url(r'^puertas/$', PuertasListView.as_view(), name='puertas'),
     url(r'^banos/$', BanosListView.as_view(), name='banos'),
     url(r'^contacto/$', ContactFormView.as_view(), name='contacto'),
+    url(r'^pyr/$', PreguntasYRespuestasTemplate.as_view(), name='pyr'),
 ]

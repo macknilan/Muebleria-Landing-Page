@@ -11,19 +11,16 @@
 #f3ffbd - VERY PALE YELLOW
 #ff1654 - AWESOME
 #faffe7 - MAIN BACKGROUND COLOR
+#b4754f - FOOTER BACKGROUND
  */
 
-.awesome
-{
+.footer-color{
     background-color: #ff1654;
 }
 
-
-nav
-{
+nav{
     background-color: #247ba0;
 }
-
 
 /* STICKY FOOTER */
 body {
@@ -38,13 +35,11 @@ main {
 }
 /* STICKY FOOTER */
       
-.breadcrumbcolorshadow
-{
+.breadcrumbcolorshadow{
     text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
 }
 
-.breadcumbbkcolor
-{
+.breadcumbbkcolor{
     background-color: rgba(0,0,0,0.1);
     padding: 0.3em;
 }
@@ -55,8 +50,7 @@ main {
     padding: 1em;
 }
 
-.titulo
-{
+.titulo{
     color: #d6ab7d !important;
     //font-size: 2.3em !important;
     font-family: 'Italianno', cursive;
@@ -65,19 +59,97 @@ main {
     text-shadow: #8c5f38 1px 1px 0px, rgba(167, 124, 81, 0.5) 1px -1px 0px, #be9368 0px 0px 15px;
 }
 
-.django-ico
-{
+.django-ico{
     //height: 1rem;
     width: 1rem;
 }
 
-.fondo_de_madera
-{
+.fondo_de_madera{
     background-image: url("/static/img/wood_bg.png");
     //muebleria/static/img/wood_bg.png
     //COLLECT_STATIC/static_root/img/wood_bg.png
 }
 
+/* bubbles of template PYR */
+
+.background-pyr{
+    background-color: rgba(0,0,0,0.1);
+    height: 100vh;
+}
+
+.box-left {
+    /*background-color: rgba(243, 255, 189, 0.5);*/
+    /*background: #00bfb6;*/
+    /*border: 1px solid #f3ffbd;*/
+    /*color: #fff; */
+    background: #f3ffbd;
+    border-radius: 15px;
+    display: inline-block;
+    float: left;
+    font-family: arial;
+    font-weight: 900;
+    margin: 0em 3em 1em 3em;
+    padding: 20px;
+    position: relative;
+    text-align: left;
+    width: 80%;
+}
+
+.box-right {
+    /*background: #00bfb6;*/
+    /*background-color: rgba(243, 255, 189, 0.5);*/
+    /*border: 1px solid #f3ffbd;*/
+    /*color: #fff; */
+    background: #f3ffbd;
+    border-radius: 15px;
+    display: inline-block;
+    float: right;
+    font-family: arial;
+    /*font-weight: 900;*/
+    margin: 0 3em 3em 0em;
+    padding: 20px;
+    position: relative;
+    text-align: left;
+    width: 80%;
+}
+
+.tri-left:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 15px solid #f3ffbd;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #f3ffbd;
+  border-bottom: 15px solid transparent;
+  right: -16px;
+  top: 0px;
+}
+
+.tri-right:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 15px solid transparent;
+  border-right: 15px solid #f3ffbd;
+  border-top: 15px solid #f3ffbd;
+  border-bottom: 15px solid transparent;
+  left: -16px;
+  top: 0px;
+}
+
+.box-left.tri-right p{
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+}
+
+.box-right.tri-left p{
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+}
+
+/* bubbles of template PYR */
 
 /*
 -------------------------------------------------------------------
