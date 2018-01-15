@@ -37,7 +37,7 @@ def change_file_name(self, imagefilename):
 @python_2_unicode_compatible
 class Mueble(SlugMixin, models.Model):
     descripcion = models.TextField("Descripcion del mueble", max_length=240)
-    dimensiones = models.TextField("Dimenciones del mueble", max_length=240)
+    dimensiones = models.TextField("Dimensiones del mueble", max_length=240)
     """
     foto_1 = models.ImageField("1ra foto del mueble", upload_to=change_file_name, max_length=50)
     foto_2 = models.ImageField("2da foto del mueble", upload_to=change_file_name, max_length=50)
@@ -46,10 +46,10 @@ class Mueble(SlugMixin, models.Model):
     foto_5 = models.ImageField("5ta foto del mueble", upload_to=change_file_name, max_length=50)
     """
     foto_1 = ImageField("1ra foto del mueble", upload_to=change_file_name, max_length=50)
-    foto_2 = ImageField("2da foto del mueble", upload_to=change_file_name, max_length=50)
-    foto_3 = ImageField("3ra foto del mueble", upload_to=change_file_name, max_length=50)
-    foto_4 = ImageField("4ta foto del mueble", upload_to=change_file_name, max_length=50)
-    foto_5 = ImageField("5ta foto del mueble", upload_to=change_file_name, max_length=50)
+    foto_2 = ImageField("2da foto del mueble", upload_to=change_file_name, max_length=50, blank=True, null=True, unique=True)
+    foto_3 = ImageField("3ra foto del mueble", upload_to=change_file_name, max_length=50, blank=True, null=True, unique=True)
+    foto_4 = ImageField("4ta foto del mueble", upload_to=change_file_name, max_length=50, blank=True, null=True, unique=True)
+    foto_5 = ImageField("5ta foto del mueble", upload_to=change_file_name, max_length=50, blank=True, null=True, unique=True)
     modelo = models.CharField("Modelo (Nombre) ", max_length=40)
     oferta = models.SmallIntegerField("¿Oferta?", default=0)
     """
