@@ -1,7 +1,10 @@
 # PERSONAL SETTINGS
-#
+# LOG
+?log$
+
 # NO SUBIR IMAGENES
 *.jpg
+
 # NO SUBIR CARPETA(s)
 COLLECT_STATIC/
 migrations/
