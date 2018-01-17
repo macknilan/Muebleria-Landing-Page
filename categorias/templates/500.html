@@ -1,0 +1,14 @@
+{% extends 'errorbase.html' %}
+{% comment %} PLANTILLA PARA MOSTRAR LAS CATEGORIAS DE LOS MUEBLES {% endcomment %}
+{% block title %} ERROR DEL SERVIDOR {% endblock %}
+{% block error500 %}
+        <!--<picture>
+            <source src="">
+        </picture>-->
+        <div class="valing-wrapper">
+            <h1 class="center-align">500</h1>
+            <h2 class="center-align">LO SENTIMOS - EL SERVIDOR A TENIDO UN PROBLEMA</h2>
+            <p class="flow-text">En un momento m&aacute;s <br> se restablecer&aacute;</p>
+            <a href="{% url 'muebles:home' %}" alt="Inicio" title="Inicio" class="waves-effect waves-light btn-large yellow accent-2"><i class="material-icons arrow_forward">Ir a la p&aacute;gina de inicio</i></a>
+        </div><!-- /valing-wrapper -->
+{% endblock error500 %}

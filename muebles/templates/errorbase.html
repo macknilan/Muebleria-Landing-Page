@@ -1,0 +1,48 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <meta name="description" content="Muebles y Dise&ntilde;os de Madera del Centro">
+
+    <title>Muebles y Dise&ntilde;os de Madera del Centro</title>    
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Italianno" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"> 
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"> 
+    <!-- <link rel="stylesheet" href="{% static "css/materialize.css" %}" type="text/css"  media="screen,projection"/> -->
+    <!-- <link rel="stylesheet" href=" {% static "css/flickity.css" %}" type="text/css"  media="screen,projection"/> -->
+    <link rel="stylesheet" href="{% static "css/style.css" %}" type="text/css"  media="screen,projection"/>
+    {% recaptcha_init 'es' %}
+</head>
+<body>
+<header>
+    
+</header>
+<main>
+    {% block error400 %}
+    {% endblock error400 %}
+    {% block error403 %}
+    {% endblock error403 %}
+    {% block error404 %}
+    {% endblock error404 %}
+    {% block error500 %}
+    {% endblock error500 %}
+</main>
+<footer class="page-footer">
+
+</footer>
+<!--  Scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script> 
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script> 
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARNNkTIUcO0U1ySnFoTdfklKcy7nA0iIM&callback=initMap"></script>
+    <script src="https://use.fontawesome.com/e9fc25ef12.js"></script>
+    <!-- <script src="{% static "js/jquery.js" %}"></script> -->
+    <!-- <script src="{% static "js/materialize.js" %}"></script> -->
+    <!-- <script src="{% static "js/flickity.pkgd.js" %}"></script> -->
+    <script src="{% static "js/myjs.js" %}"></script>
+<!--  Scripts-->
+  </body>
+</html>

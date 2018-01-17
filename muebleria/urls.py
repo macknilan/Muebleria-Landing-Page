@@ -23,9 +23,12 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'', include('muebles.urls', namespace='muebles')),
     url(r'', include('categorias.urls', namespace='categorias')),
-
 ]
 
+handler404 = 'main.views.not_found'
+handler500 = 'main.views.server_error'
+handler403 = 'main.views.permission_denied'
+handler400 = 'main.views.bad_request'
 
 if settings.DEBUG:
     """

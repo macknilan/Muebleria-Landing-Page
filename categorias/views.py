@@ -9,6 +9,34 @@ from muebles.models import Mueble
 from .forms import ContactForm
 
 
+def server_error(request):
+    """
+    FUNCION PARA PERSONALIZAR LA PAGINA DE ERROR 500
+    """
+    return render(request, '500.html')
+
+
+def not_found(request):
+    """
+    FUNCION PARA PERSONALIZAR LA PAGINA DE ERROR 404
+    """
+    return render(request, '404.html')
+
+
+def permission_denied(request):
+    """
+    FUNCION PARA PERSONALIZAR LA PAGINA DE ERROR 403
+    """
+    return render(request, '403.html')
+
+
+def bad_request(request):
+    """
+    FUNCION PARA PERSONALIZAR LA PAGINA DE ERROR 400
+    """
+    return render(request, '400.html')
+
+
 class ComedoresListView(ListView):
     """
     CLASE PARA DESPLEGAR LOS COMEDORES EN LISTA
