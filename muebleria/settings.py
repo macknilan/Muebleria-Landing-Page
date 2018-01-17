@@ -93,6 +93,18 @@ DATABASES = {
     }
 }
 
+"""   CACHE   """
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": os.environ['CACHELOCATION'],
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+            "PASSWORD": os.environ['CACHEPSWD'],
+        }
+    }
+}
+"""   CACHE   """
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
