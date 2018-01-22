@@ -1,6 +1,6 @@
 {% extends 'errorbase.html' %}
+{% block head_title %}PAGINA NO ENCONTRADA \ {{ block.super }}{% endblock head_title %}
 {% comment %} PLANTILLA PARA MOSTRAR LAS CATEGORIAS DE LOS MUEBLES {% endcomment %}
-{% block title %} PAGINA NO ENCONTRADA {% endblock %}
 {% block error400 %}
     <div class="row">
         <!--<picture>
@@ -9,7 +9,7 @@
         <div class="valing-wrapper">
             <h1 class="center-align">400</h1>
             <h2 class="center-align">LO SENTIMOS - SE HA ENCONTRADO UN PROBLEMA CON LA SOLICITUD</h2>
-            <p class="flow-text">La solicitud contiene sintaxis errónea y no debería repetirse.</p>
+            <p class="flow-text">La solicitud contiene sintaxis err&oacute;nea y no debería repetirse.</p>
             <a href="{% url 'muebles:home' %}" alt="Inicio" title="Inicio" class="waves-effect waves-light btn-large yellow accent-2"><i class="material-icons arrow_forward">Ir a la p&aacute;gina de inicio</i></a>
         </div><!-- /valing-wrapper -->
     </div><!-- /row -->
