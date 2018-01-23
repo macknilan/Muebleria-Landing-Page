@@ -106,6 +106,10 @@ CACHES = {
         }
     }
 }
+
+CACHE_MIDDLEWARE_ALIAS = 'default'
+CACHE_MIDDLEWARE_SECONDS = 60
+
 """   CACHE   """
 
 # Password validation
