@@ -106,12 +106,12 @@ class BanosListView(ListView):
         queryset = super(BanosListView, self).get_queryset()
         return queryset.filter(categoria__cat_mueble="banos")
 
+
 class PreguntasYRespuestasTemplate(TemplateView):
-    """ 
+    """
     CLASE PARA MOSTRAR TEMPLATE DE PREGUNTAS Y RESPUESTAS
     """
     template_name = "Pyr.html"
-
 
 
 class ContactFormView(FormView):
@@ -139,4 +139,3 @@ class ContactFormView(FormView):
         mail.send()
 
         return super(ContactFormView, self).form_valid(form)
-
