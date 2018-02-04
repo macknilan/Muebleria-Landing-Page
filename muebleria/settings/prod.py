@@ -6,7 +6,7 @@ SECRET_KEY = os.environ['MUEBLERIALLAVE']
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['.rodolfougalde.xyz']
+ALLOWED_HOSTS = os.environ['ALLOWED_HOSTS']
 
 INSTALLED_APPS += (
     'storages',
