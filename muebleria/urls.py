@@ -25,10 +25,10 @@ urlpatterns = [
     url(r'', include('categorias.urls', namespace='categorias')),
 ]
 
-handler404 = 'main.views.not_found'
-handler500 = 'main.views.server_error'
-handler403 = 'main.views.permission_denied'
-handler400 = 'main.views.bad_request'
+handler404 = 'categorias.views.not_found'
+handler500 = 'categorias.views.server_error'
+handler403 = 'categorias.views.permission_denied'
+handler400 = 'categorias.views.bad_request'
 
 if settings.DEBUG:
     """
