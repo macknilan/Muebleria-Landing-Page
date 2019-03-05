@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'categorias',
     'muebles',
     'sorl.thumbnail',
-    'snowpenguin.django.recaptcha2',
+    'captcha',
     'django_extensions',
     'storages',
 ]
@@ -81,7 +81,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'muebleria.wsgi.application'
-
 
 
 """ DATABASE """
