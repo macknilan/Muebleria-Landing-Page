@@ -67,8 +67,8 @@ main {
 
 .fondo_de_madera{
     background-image: url("/static/img/wood_bg.png");
-    //muebleria/static/img/wood_bg.png
-    //COLLECT_STATIC/static_root/img/wood_bg.png
+    /* muebleria/static/img/wood_bg.png
+    COLLECT_STATIC/static_root/img/wood_bg.png */
 }
 
 /* bubbles of template PYR */
@@ -158,45 +158,43 @@ main {
 -------------------------------------------------------------------
 */
 
-/* carousel height, as percentage of width */
+/* CAROUSEL HEIGHT, AS PERCENTAGE OF WIDTH */
 .fcarousel 
 {
-  //height: 88vh;
+  /* height: 88vh; */
   height: calc(100vh - 4em);
-  //border: 1px solid blue;
-  //padding-bottom: 93.1%;
+  /* border: 1px solid blue; */
+  /* padding-bottom: 93.1%; */
 }
 
-/* viewport inherit size from carousel */
+/* VIEWPORT INHERIT SIZE FROM CAROUSEL */
 .fcarousel .flickity-viewport
 {
   position: absolute;
   width: 100%;
 }
 
-
-/* cell inherit height from carousel */
+/* CELL INHERIT HEIGHT FROM CAROUSEL */
 .carousel-cell 
 {
-    //width: auto; /* full width */
-    //height: auto; /* height of carousel */
+    /* width: auto; */ /* full width */
+    /* height: auto; */ /* height of carousel */
     height: calc(100vh - 4em);
     margin-right: 5px;
-    //border: 10px solid red;
-    //background-position: center center;
-    //background-size: cover;
+    /* border: 10px solid red; */
+    /* background-position: center center; */
+    /* background-size: cover; */
 }
-
 
 .carousel_cell_img
 {
-    //display: block;
-    //width: 100%;
-    //height: auto;
-    //border: 1px solid #dad417;
+    /* display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid #dad417; */
 }
 
-/* move page dots into carousel */
+/* MOVE PAGE DOTS INTO CAROUSEL */
 /*.flickity-page-dots
 {
     bottom: 10px;

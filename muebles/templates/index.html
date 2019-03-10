@@ -11,7 +11,7 @@
                 <source {% thumbnail picturescat.imagen_categoria "1199" as imagendecategoria %} srcset="{{imagendecategoria.url}}, {{imagendecategoria.url|resolution:"2x"}}" alt="{{ picturescat.cat_mueble }}" title="{{ picturescat.cat_mueble }}" media="(min-width: 992px) and (max-width: 1199px)">{% endthumbnail %}
                 <source {% thumbnail picturescat.imagen_categoria "991" as imagendecategoria %} srcset="{{imagendecategoria.url}}, {{imagendecategoria.url|resolution:"2x"}}" alt="{{ picturescat.cat_mueble }}" title="{{ picturescat.cat_mueble }}" media="(min-width: 601px) and (max-width: 991px)">{% endthumbnail %}
                 <source {% thumbnail picturescat.imagen_categoria "600" as imagendecategoria %} srcset="{{imagendecategoria.url}}, {{imagendecategoria.url|resolution:"2x"}}" alt="{{ picturescat.cat_mueble }}" title="{{ picturescat.cat_mueble }}" media="(min-width: 600px)">{% endthumbnail %}
-                    <img class="carousel-cell carousel_cell_img" {% thumbnail picturescat.imagen_categoria "600" as imagendecategoria %} srcset="{{imagendecategoria.url}}, {{imagendecategoria.url|resolution:"2x"}}" alt="{{ picturescat.cat_mueble }}" title="{{ picturescat.cat_mueble }}"> {% endthumbnail %}
+                    <img class="carousel-cell" {% thumbnail picturescat.imagen_categoria "600" as imagendecategoria %} srcset="{{imagendecategoria.url}}, {{imagendecategoria.url|resolution:"2x"}}" alt="{{ picturescat.cat_mueble }}" title="{{ picturescat.cat_mueble }}"> {% endthumbnail %}
             </picture>
         {% endfor %}
 </div>
