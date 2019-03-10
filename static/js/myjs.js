@@ -1,7 +1,7 @@
     //<script src="js/init.js"></script>
     //<script>
 
-    function initMap() {
+    /*function initMap() {
         var uluru = { lat: 20.522674, lng: -99.891567 };
         var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 10,
@@ -178,7 +178,7 @@
             map: map,
             title: 'Tequisquiapan - Querétaro',
         });
-    }
+    }*/
 
     document.addEventListener('DOMContentLoaded', function() {
         var elems = document.querySelectorAll('.sidenav');
