@@ -14,12 +14,19 @@
 #b4754f - FOOTER BACKGROUND
  */
 
-.footer-color{
-    background-color: #ff1654;
+.footer-color {
+    /* background-color: #ff1654; */
 }
 
-nav{
-    background-color: #247ba0;
+nav {
+    /* position: fixed;
+    background-color: rgba(0, 0, 0, 0.2); */
+    /* color: #000; */
+}
+
+.navbar-fixed {
+    position: absolute;
+    z-index:999999999;
 }
 
 /* STICKY FOOTER */
@@ -30,8 +37,9 @@ body {
 }
 
 main {
-    flex: 1 0 auto;
     background-color: #faffe7;
+    flex: 1 0 auto;
+    padding: 64px 0 0 0;
 }
 /* STICKY FOOTER */
       
@@ -53,11 +61,12 @@ main {
 
 .titulo{
     color: #d6ab7d !important;
-    //font-size: 2.3em !important;
+    /* font-size: 2.3em !important; */
     font-family: 'Italianno', cursive;
     line-height: 100%;
     text-align: center;
-    text-shadow: #8c5f38 1px 1px 0px, rgba(167, 124, 81, 0.5) 1px -1px 0px, #be9368 0px 0px 15px;
+    /* text-shadow: #8c5f38 1px 1px 0px, rgba(167, 124, 81, 0.5) 1px -1px 0px, #be9368 0px 0px 15px; */
+    text-shadow: #392f22 0px 0px 5px, rgba(167, 124, 81, 0.5) 1px -1px 0px, #392f22 1px 1px 1px;
 }
 
 .django-ico{
@@ -207,6 +216,7 @@ main {
 
 .page-footer {
     padding-top: 0px;
+    background-color: #593f20;
 }
 
 
