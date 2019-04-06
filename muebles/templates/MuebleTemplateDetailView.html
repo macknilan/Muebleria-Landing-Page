@@ -35,7 +35,7 @@
             <div class="row">
                 <h1>{{ object.modelo }}</h1>
                 <p class="flow-text">{{ object.descripcion|safe }}</p>
-                <p class="flow-text">{{ object.dimensiones|safe }}</p>
+                <p>{{ object.dimensiones|safe }}</p>
                 <h3>${{ object.precio|intcomma }}</h3>
             </div>
             <!-- /row -->
@@ -136,3 +136,8 @@
         </div><!-- /row -->
     </div><!-- /container -->
 {% endblock DetailTemplate %}
+
+
+
+
+

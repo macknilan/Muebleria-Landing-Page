@@ -43,7 +43,7 @@ class ComedoresListView(ListView):
     """
     model = Mueble
     template_name = "ComedoresCategoryTemplateView.html"
-    paginate_by = 1
+    paginate_by = 4
     ordering = ["id"]
 
     def get_queryset(self):
@@ -57,7 +57,7 @@ class CocinasListView(ListView):
     """
     model = Mueble
     template_name = "CocinasCategoryTemplateView.html"
-    paginate_by = 1
+    paginate_by = 4
     ordering = ["id"]
 
     def get_queryset(self):
@@ -71,7 +71,7 @@ class ClosetsListView(ListView):
     """
     model = Mueble
     template_name = "ClosetsCategoryTemplateView.html"
-    paginate_by = 1
+    paginate_by = 4
     ordering = ["id"]
 
     def get_queryset(self):
@@ -85,7 +85,7 @@ class PuertasListView(ListView):
     """
     model = Mueble
     template_name = "PuertasCategoryTemplateView.html"
-    paginate_by = 1
+    paginate_by = 4
     ordering = ["id"]
 
     def get_queryset(self):
@@ -99,7 +99,7 @@ class BanosListView(ListView):
     """
     model = Mueble
     template_name = "BanosCategoryTemplateView.html"
-    paginate_by = 1
+    paginate_by = 4
     ordering = ["id"]
 
     def get_queryset(self):
@@ -135,6 +135,7 @@ class ContactFormView(FormView):
         )
 
         mail = EmailMessage(subject, body, sender, ['mail@gmail.com'], reply_to=['noreply@gmail.com'])
+        # CHANGE -mail@gmail.com- FOR EMAIL TO WORK
         # import ipdb; ipdb.set_trace() # ESTO ES PARA DEBUGEAR
         mail.send()
 
