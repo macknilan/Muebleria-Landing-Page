@@ -13,9 +13,9 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+BASE_DIR = os.path.dirname(os.path.dirname(
+    os.path.dirname(os.path.abspath(__file__))))
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 
 # Quick-start development settings - unsuitable for production
@@ -159,36 +159,35 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 """   [STATIC & MEDIA FILES]   """
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-# PARA PONER CACHE LOS ARCHIVOS ESTATICOS EN PRODUCCION DEBUG = False
-# https://docs.djangoproject.com/en/1.11/ref/contrib/staticfiles/#django.contrib.staticfiles.storage.ManifestStaticFilesStorage
-# STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-# PARA PONER CACHE LOS ARCHIVOS ESTATICOS EN PRODUCCION
-
 AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
 AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
+
+AWS_STORAGE_BUCKET_NAME = os.environ['AWS_STORAGE_BUCKET_NAME']
 AWS_S3_ENDPOINT_URL = os.environ['AWS_S3_ENDPOINT_URL']
 AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': 'max-age=86400',
 }
 
-AWS_STORAGE_BUCKET_NAME = os.environ['AWS_STORAGE_BUCKET_NAME']
 AWS_LOCATION = os.environ['AWS_LOCATION']
 AWS_DEFAULT_ACL = 'public-read'
 
+# PARA PONER CACHE LOS ARCHIVOS ESTATICOS EN PRODUCCION
+# https://docs.djangoproject.com/en/1.11/ref/contrib/staticfiles/#django.contrib.staticfiles.storage.ManifestStaticFilesStorage
+# STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
 STATICFILES_LOCATION = 'static'
-STATIC_URL = '%s/%s/' % (AWS_S3_ENDPOINT_URL, STATICFILES_LOCATION)
+STATIC_URL = '{}/{}/'.(AWS_S3_ENDPOINT_URL, STATICFILES_LOCATION)
 STATICFILES_STORAGE = 'custom_storages.StaticStorage'
 
 MEDIAFILES_LOCATION = 'media'
-MEDIA_URL = '%s/%s/' % (AWS_S3_ENDPOINT_URL, MEDIAFILES_LOCATION)
+MEDIA_URL = '{}/{}/'.(AWS_S3_ENDPOINT_URL, MEDIAFILES_LOCATION)
 DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 
 """   [STATIC & MEDIA FILES]   """
