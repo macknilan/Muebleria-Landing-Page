@@ -174,7 +174,6 @@ AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': 'max-age=86400',
 }
 
-AWS_LOCATION = os.environ['AWS_LOCATION']
 AWS_DEFAULT_ACL = 'public-read'
 
 # PARA PONER CACHE LOS ARCHIVOS ESTATICOS EN PRODUCCION
@@ -183,11 +182,11 @@ AWS_DEFAULT_ACL = 'public-read'
 # STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 AWS_S3_REGION_NAME = os.environ['AWS_S3_REGION_NAME']
-STATICFILES_LOCATION = 'static'
+STATICFILES_LOCATION = 'muebleria/static'
 STATIC_URL = '{}/{}/'.format(AWS_S3_ENDPOINT_URL, STATICFILES_LOCATION)
 STATICFILES_STORAGE = 'custom_storages.StaticStorage'
 
-MEDIAFILES_LOCATION = 'media'
+MEDIAFILES_LOCATION = 'muebleria/media'
 MEDIA_URL = '{}/{}/'.format(AWS_S3_ENDPOINT_URL, MEDIAFILES_LOCATION)
 DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 
