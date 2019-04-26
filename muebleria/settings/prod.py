@@ -174,6 +174,7 @@ AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': 'max-age=86400',
 }
 
+AWS_S3_SIGNATURE_VERSION = 's3v4'
 AWS_DEFAULT_ACL = 'public-read'
 
 # PARA PONER CACHE LOS ARCHIVOS ESTATICOS EN PRODUCCION
@@ -189,6 +190,9 @@ STATICFILES_STORAGE = 'custom_storages.StaticStorage'
 MEDIAFILES_LOCATION = 'media'
 MEDIA_URL = 'https://%s/%s/' % (AWS_S3_ENDPOINT_URL, MEDIAFILES_LOCATION)
 DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+
+print STATIC_URL
+
 
 """   [STATIC & MEDIA FILES]   """
 
