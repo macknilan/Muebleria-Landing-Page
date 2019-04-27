@@ -162,7 +162,7 @@ USE_TZ = True
 """   [STATIC & MEDIA FILES]   """
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'muebleria/static'),
+    os.path.join(BASE_DIR, 'static/'),
 )
 
 AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
