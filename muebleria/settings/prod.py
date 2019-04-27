@@ -162,7 +162,7 @@ USE_TZ = True
 """   [STATIC & MEDIA FILES]   """
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static/'),
+    os.path.join(BASE_DIR, 'static'),
 )
 
 AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
@@ -182,11 +182,11 @@ AWS_DEFAULT_ACL = 'public-read'
 # STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 AWS_S3_REGION_NAME = os.environ['AWS_S3_REGION_NAME']
-STATICFILES_LOCATION = 'muebleria/static'
+STATICFILES_LOCATION = 'muebleria/static/'
 STATIC_URL = '{}/{}/'.format(AWS_S3_ENDPOINT_URL, STATICFILES_LOCATION)
 STATICFILES_STORAGE = 'custom_storages.StaticStorage'
 
-MEDIAFILES_LOCATION = 'muebleria/media'
+MEDIAFILES_LOCATION = 'muebleria/media/'
 MEDIA_URL = '{}/{}/'.format(AWS_S3_ENDPOINT_URL, MEDIAFILES_LOCATION)
 DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 
