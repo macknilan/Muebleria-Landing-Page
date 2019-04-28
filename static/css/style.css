@@ -75,7 +75,7 @@ main {
 }
 
 .fondo_de_madera{
-    background-image: url('{{ STSTIC_URL }}img/wood_bg.png');
+    background-image: url('/static/img/wood_bg.png');
     /* muebleria/static/img/wood_bg.png
     COLLECT_STATIC/static_root/img/wood_bg.png */
 }

@@ -20,7 +20,7 @@
 <header>
     {% include 'menubar.html' %}
 </header>
-<main class="fondo_de_madera">
+<main style="background: url({% static '/static/img/wood_bg.png' %})">
     {% block fpss %}{% endblock fpss %}
     {% block CategoryTemplate %}{% endblock CategoryTemplate %}
     {% block DetailTemplate %}{% endblock DetailTemplate %}
