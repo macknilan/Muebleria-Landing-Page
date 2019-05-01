@@ -190,8 +190,6 @@ MEDIAFILES_LOCATION = 'muebleria/media'
 MEDIA_URL = '{}/{}/'.format(AWS_S3_ENDPOINT_URL, MEDIAFILES_LOCATION)
 DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 
-print STATIC_URL
-
 """   [STATIC & MEDIA FILES]   """
 
 """   [ EMAIL ]   """
