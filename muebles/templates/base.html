@@ -20,14 +20,12 @@
 <header>
     {% include 'menubar.html' %}
 </header>
-<main style="background-image: url({% static '/img/wood_bg.png' %})">
+<main style="background-image: url({% static "/img/wood_bg.png" %})">
     {% block fpss %}{% endblock fpss %}
     {% block CategoryTemplate %}{% endblock CategoryTemplate %}
     {% block DetailTemplate %}{% endblock DetailTemplate %}
     {% block ContactTemplate %}{% endblock ContactTemplate %}
     {% block PyrTemplate %}{% endblock PyrTemplate %}
-
-    
     <!--
     <div class="col s12 m12 l12 xl12 fcarousel">
         <picture>
