@@ -6,7 +6,7 @@
 
 <div class="col s12 m12 l12 xl12 fcarousel">
         {% for picturescat in pictures_fpss %}
-            <p>picturescat</p>
+            <p>{{ picturescat }}</p>
             <picture>
                 <source {% thumbnail picturescat.imagen_categoria "1800" as imagendecategoria %} srcset="{{imagendecategoria.url}}, {{imagendecategoria.url|resolution:"2x"}}" alt="{{ picturescat.cat_mueble }}" title="{{ picturescat.cat_mueble }}" media="(min-width:1200px)">{% endthumbnail %}
                 <source {% thumbnail picturescat.imagen_categoria "1199" as imagendecategoria %} srcset="{{imagendecategoria.url}}, {{imagendecategoria.url|resolution:"2x"}}" alt="{{ picturescat.cat_mueble }}" title="{{ picturescat.cat_mueble }}" media="(min-width: 992px) and (max-width: 1199px)">{% endthumbnail %}
