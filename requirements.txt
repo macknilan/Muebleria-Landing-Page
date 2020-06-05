@@ -6,7 +6,7 @@ cffi==1.12.3
 chardet==3.0.4
 Click==7.0
 colorclass==2.2.0
-Django==1.11.25
+Django==1.11.29
 django-extensions==2.2.3
 django-recaptcha==2.0.5
 django-redis==4.10.0
